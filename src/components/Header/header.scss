@@ -24,9 +24,13 @@ html {
 		rgba(43, 50, 178, 0.25),
 		rgba(12, 9, 10, 0.8) 100%
 	);
-	min-height: 10em;
 	height: auto;
+	min-height: 10em;
 	padding: 0 10%;
+	width: 100%;
+
+	position: fixed;
+	top: 0;
 }
 
 .logo__container {
@@ -66,7 +70,7 @@ html {
 		z-index: -1;
 
 		animation: animateButtons 2s alternate;
-		transition: all 500ms ease;
+		transition: all 250ms ease;
 	}
 }
 

@@ -1,5 +1,62 @@
 @import "../../../color-variables";
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 
-.app-main {
+@mixin flex_props(
+	$justify-content: space-between,
+	$flex-direction: row,
+	$align-items: center
+) {
+	display: flex;
+	align-items: $align-items;
+	flex-direction: $flex-direction;
+	justify-content: $justify-content;
+}
+
+// Try
+.outer__main-try {
+	display: grid;
+	place-content: center;
+	width: 100%;
+	height: 100vh;
 	padding: 0 10%;
+}
+
+// App main section
+.app-main {
+	height: 50vh;
+	@include flex_props(
+		$justify-content: space-around,
+		$flex-direction: column
+	);
+}
+
+small {
+	font-family: "Italianno", cursive;
+	font-size: 40px;
+	color: #fff;
+}
+
+// Hero Text
+.hero__text {
+	color: $primary_blue;
+	font-family: "Italianno", cursive;
+	font-size: 80px;
+	font-weight: 100;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.outer__main-try {
+		padding: 0 5%;
+	}
+
+	small {
+		font-size: 20px;
+	}
+
+	.hero__text {
+		font-size: 40px;
+		font-weight: 100;
+		text-align: center;
+	}
 }

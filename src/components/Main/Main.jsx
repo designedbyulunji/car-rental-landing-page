@@ -1,7 +1,8 @@
+import "../../../universal-styles.scss";
 import "./main.scss";
 
 function Main() {
-	return <h2>Main</h2>;
+	return <div className="app-main">hello</div>;
 }
 
 export default Main;

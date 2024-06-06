@@ -2,7 +2,7 @@ import "../universal-styles.scss";
 import backgroudCar1 from "./assets/videos/supercar-blu.mp4";
 import backgroudCar2 from "./assets/videos/supercar-blac.mp4";
 import Header from "./components/Header/Header";
-// import Main from "./components/Main/Main";
+import Main from "./components/Main/Main";
 
 function App() {
 	return (
@@ -15,7 +15,7 @@ function App() {
 
 			{/* Components */}
 			<Header />
-			{/* <Main /> */}
+			<Main />
 		</main>
 	);
 }

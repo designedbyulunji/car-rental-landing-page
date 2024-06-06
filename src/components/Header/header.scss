@@ -29,6 +29,15 @@ html {
 	padding: 0 10%;
 }
 
+.logo__container {
+	transition: all 100ms linear;
+	cursor: pointer;
+}
+
+.logo__container:hover {
+	opacity: 0.8;
+}
+
 .btn {
 	background: transparent;
 	border-radius: 30px;
@@ -38,12 +47,51 @@ html {
 	padding: 15px 50px;
 
 	position: relative;
+	overflow: hidden;
+	transition: all 100ms linear;
 
 	&::before {
-		width: 100%;
-		height: 100%;
+		background-image: linear-gradient(
+			to right,
+			$primary_blue,
+			$secondary_blue
+		);
 		content: "";
+		height: 100%;
+		width: 0;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		animation: animateButtons 2s alternate;
+		transition: all 500ms ease;
 	}
+}
+
+@keyframes animateButtons {
+	0% {
+		transform: translateX(-1000px);
+		width: 100%;
+	}
+	50% {
+		transform: translateX(0);
+		width: 100%;
+	}
+	100% {
+		transform: translateX(-1000px);
+		width: 100%;
+	}
+}
+
+.btn:hover::before {
+	animation: animateButtons 100ms linear;
+	width: 100%;
+}
+
+.btn:active {
+	transform: scale(0.9);
 }
 
 .login__btn {
@@ -52,4 +100,32 @@ html {
 }
 .signup__btn {
 	margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+	.app-header {
+		padding: 0 5%;
+	}
+
+	.logo__container {
+		height: 40px;
+		width: 40px;
+	}
+
+	.logo {
+		height: 100%;
+		width: 100%;
+	}
+	.btn {
+		padding: 10px 20px;
+		font-size: 1em;
+	}
+
+	.login__btn {
+		margin-right: 5px;
+		border: none;
+	}
+	.signup__btn {
+		margin-left: 5px;
+	}
 }

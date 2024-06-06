@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Videos
+supercar-blue.mp4
+supercar-black.mp4
